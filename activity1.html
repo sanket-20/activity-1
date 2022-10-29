@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/bulboff.gif">
+<!--     
+    <button onclick="onBulb()">On Bulb</button>
+    <button onclick="offBulb()">Off Bulb</button> -->
+
+    <button onclick="both()">Button(on-off)</button>
+
+
+    <script>
+        function onBulb(){
+            document.querySelector('img').src = "img/bulbon.gif";
+        }
+
+        function offBulb(){
+            document.querySelector('img').src = "img/bulboff.gif";
+        }
+
+
+        var count = 1;
+        function both(){
+            if(count%2==1){
+                document.querySelector('img').src = "img/bulbon.gif";
+            }
+            else{
+                document.querySelector('img').src = "img/bulboff.gif";
+            }
+            count++;
+        }
+        
+    </script>
+</body>
+</html>
